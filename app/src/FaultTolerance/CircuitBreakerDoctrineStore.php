@@ -27,7 +27,7 @@ class CircuitBreakerDoctrineStore
         $state = $circuitBreaker->getState();
         $stringItem = "$state,";
         $item->set($stringItem);
-        self::$cache->save($item);
+        self::$cache->save($item, "", 900);
     }
 
     public static function deleteCircuitBreakerForName($name)
