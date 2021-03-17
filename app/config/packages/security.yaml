@@ -1,0 +1,9 @@
+security:
+    providers:
+        users_in_memory: { memory: null }
+    firewalls:
+        validate_jwt_token:
+            pattern: ^/api/v1.0
+            guard:
+                authenticators:
+                    - App\Security\JWTTokenAuthenticator
