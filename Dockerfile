@@ -146,5 +146,5 @@ CMD ["/bin/sh", "-c", "php-fpm -D;\
     export dollar='$' realpath_root='$realpath_root' fastcgi_script_name='$fastcgi_script_name'\
     is_args='$is_args' args='$args' uri='$uri';\
     /usr/local/bin/envsubst < /etc/nginx/nginx.template > /etc/nginx/conf.d/default.conf;\
-    bin/console doctrine:datase:create; bin/console doctrine:migrations:migrate;\
+    bin/console doctrine:database:create; bin/console doctrine:migrations:migrate;\
     nginx -g 'daemon off;'"]
